@@ -12,57 +12,49 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 function App() {
 
   return (
-    <div>
+    <div className='layers'>
       <Parallax pages={2}>
         <ParallaxLayer
         offset={0}
-        speed={0.3}
+        speed={0.45}
         factor={1}
         style={{backgroundImage: `url(${layerBase})`,
-        backgroundSize: 'cover'}}>
+        backgroundSize: 'cover'}}
+        className="layer layer__base"
+        >
         </ParallaxLayer>
 
+        <ParallaxLayer 
+        offset={0.4} 
+        speed={0.15} 
+        className="layer layer__header">
+          Just a parallax effect
+        </ParallaxLayer>
 
         <ParallaxLayer
         offset={0}
-        speed={0}
+        speed={0.5}
         factor={1}
         style={{backgroundImage: `url(${layerMiddle})`,
-        backgroundSize: 'cover'}}>
+        backgroundSize: 'cover'}}
+        className="layer">
         </ParallaxLayer>
 
         <ParallaxLayer
         offset={0}
-        speed={0}
+        speed={0.4}
         factor={1}
         style={{backgroundImage: `url(${layerFront})`,
-        backgroundSize: 'cover'}}>
+        backgroundSize: 'cover'}}
+        className="layer">
         </ParallaxLayer>
 
         <ParallaxLayer
-        offset={0.5}
-        speed={0}
-        factor={1}
-        style={{backgroundImage: `url(${ground})`,
-        backgroundSize: 'cover'}}>
-        </ParallaxLayer>
-
-
-        <ParallaxLayer
-        offset={1}
-        speed={0}
-        factor={1}
+        offset={0.8}
+        speed={0.2}
+        factor={1.5}
         style={{backgroundImage: `url(${dungeon})`,
         backgroundSize: 'cover'}}>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={0.4} speed={2}>
-          <h1>Hello</h1>
-        </ParallaxLayer>
-
-
-        <ParallaxLayer offset={1.5} speed={4}>
-          <h1>Next page</h1>
         </ParallaxLayer>
 
       </Parallax>
