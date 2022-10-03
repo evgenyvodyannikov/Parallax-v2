@@ -27,13 +27,13 @@ function App() {
         <ParallaxLayer 
         offset={0.4} 
         speed={0.15} 
-        className="layer layer__header">
+        className="layer layer__text">
           Just a parallax effect
         </ParallaxLayer>
 
         <ParallaxLayer
         offset={0}
-        speed={0.5}
+        speed={0.45}
         factor={1}
         style={{backgroundImage: `url(${layerMiddle})`,
         backgroundSize: 'cover'}}
@@ -42,19 +42,36 @@ function App() {
 
         <ParallaxLayer
         offset={0}
-        speed={0.4}
+        speed={0.55}
         factor={1}
         style={{backgroundImage: `url(${layerFront})`,
         backgroundSize: 'cover'}}
         className="layer">
         </ParallaxLayer>
 
+
         <ParallaxLayer
-        offset={0.8}
+        offset={0.45}
+        speed={0.55}
+        factor={1}
+        style={{backgroundImage: `url(${ground})`,
+        backgroundSize: 'cover'}}
+        className="layer layer__ground">
+        </ParallaxLayer>
+
+        <ParallaxLayer
+        offset={0.7}
         speed={0.2}
         factor={1.5}
         style={{backgroundImage: `url(${dungeon})`,
         backgroundSize: 'cover'}}>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+        offset={1.2}
+        speed={0.5}
+        className="layer layer__text">
+        Next page!
         </ParallaxLayer>
 
       </Parallax>

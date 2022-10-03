@@ -41,10 +41,9 @@ body {
     position: absolute;
     background-size: cover;
     background-position: center;
-    will-change: transform;
     z-index: 1;
 
-    &.layer__header {
+    &.layer__text {
       z-index: 0;
       text-transform: uppercase;
       font-weight: 900;
@@ -57,17 +56,10 @@ body {
       z-index: 0;
     }
 
-    &.layer__base::after {
-      content: '';
-      position: absolute;
-      z-index: 100;
-      width: 100%;
-      height: calc(var(--index) * 10);
-      background-image: url(./assets/image/ground.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      bottom: calc(var(--index) * -4.5);
+    &.layer__ground {
+      z-index: 5;
+      width: 50vh;
+      height: 30%;
     }
 
     &.layer__ground {
